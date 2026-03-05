@@ -1,0 +1,160 @@
+# DreamLens — App Store Metadata
+
+---
+
+## Subtitle (30 characters max)
+AI Dream Journal — 100% Offline
+
+---
+
+## Promotional Text (170 characters max)
+Decode your dreams with on-device AI. No internet needed, no data collected. Your dreams stay private — always. Now with mystical, scientific, and poetic interpretation styles.
+
+---
+
+## Description (4000 characters max)
+
+DreamLens is your personal AI dream interpreter that works entirely on your device. Describe your dream, tap a button, and receive a rich interpretation — all without an internet connection and without your data ever leaving your phone.
+
+AN AI THAT LIVES ON YOUR DEVICE
+DreamLens uses a compact yet powerful AI model (Qwen 3.5) that is bundled directly inside the app. There are no servers, no API calls, no cloud processing. The moment you download the app, everything is ready to go — even in airplane mode.
+
+HOW IT WORKS
+• Write down your dream in your own words
+• Tap "Decode Dream" and let the AI analyze it
+• Get a detailed interpretation with emotional tone, key symbols, and a unique dream aura visualization
+• Your dream is saved to your personal journal automatically
+
+RICH INTERPRETATIONS
+Every dream analysis includes:
+— Emotional Tone: the dominant emotion of your dream, identified with an emoji
+— Symbols: key elements from your dream and what they may represent
+— Interpretation: a 2-3 sentence analysis of your dream's meaning
+— Dream Aura: a unique animated color visualization generated from your dream
+
+THREE INTERPRETATION STYLES
+Choose how you want your dreams interpreted:
+• Mystical — a spiritual, symbolic approach rooted in ancient traditions
+• Scientific — a psychological perspective inspired by dream research
+• Poetic — a literary, artistic reading of your dream's narrative
+
+DREAM JOURNAL
+All your interpreted dreams are saved in a beautiful card-based timeline. Revisit any dream to read its full interpretation, symbols, and aura. Delete entries you no longer need.
+
+BILINGUAL AI
+The AI can interpret your dreams in English or Russian. Switch languages anytime in Settings — your next interpretation will be in the language you choose.
+
+DESIGNED FOR THE NIGHT
+DreamLens features a dark cosmic interface with animated starfields, glassmorphism cards, and smooth animations. It's designed to feel calm and immersive — perfect for those moments right after you wake up.
+
+YOUR PRIVACY IS ABSOLUTE
+• No internet connection required — ever
+• No accounts, no sign-ups, no logins
+• No data is collected, transmitted, or shared
+• No analytics, no tracking, no ads
+• Dreams are stored only on your device as local files
+• Delete the app and all data is gone
+
+REQUIREMENTS
+• iPhone 12 or newer (A14 Bionic chip or later)
+• iOS 17.0 or later
+• Approximately 600 MB of storage space
+
+---
+
+## Keywords (100 characters max, comma-separated)
+dream,journal,interpreter,AI,offline,private,symbols,sleep,diary,analysis,aura,psychology,meanings
+
+---
+
+## Privacy Policy URL Text / Privacy Details
+
+### App Privacy Section (App Store Connect)
+
+**Data Collection: None**
+
+DreamLens does not collect any data. Select "No" for all data collection categories in App Store Connect.
+
+Specifically:
+- No data is collected from users
+- No data is shared with third parties
+- No tracking of any kind
+- No analytics SDKs
+- No network requests are made by the app
+- No user accounts or authentication
+
+### Privacy Policy (for website/App Store link)
+
+**DreamLens Privacy Policy**
+
+Last updated: March 5, 2026
+
+DreamLens is designed with one fundamental principle: your dreams are yours alone.
+
+**No Data Collection**
+DreamLens does not collect, store, transmit, or process any personal data on external servers. The app makes zero network requests. There is no analytics, no crash reporting services, no advertising SDKs, and no third-party libraries that communicate over the internet.
+
+**On-Device Processing**
+All dream interpretation is performed entirely on your device using an AI model that is bundled within the app itself. Your dream text is processed locally by this model and never leaves your phone. No internet connection is required to use any feature of the app.
+
+**Local Storage Only**
+Your dream journal entries (the text you enter and the AI-generated interpretations) are stored as local files in the app's sandboxed Documents directory on your device. This data is:
+- Not accessible to other apps
+- Not backed up to any cloud service by the app itself (standard iCloud device backups may include app data if enabled by the user in iOS Settings)
+- Permanently deleted when you delete the app
+
+**No Accounts**
+DreamLens does not require or offer user accounts, sign-ups, email addresses, or any form of authentication.
+
+**No Tracking**
+DreamLens does not use any tracking technologies. There are no cookies, no device fingerprinting, no advertising identifiers, and no usage analytics.
+
+**Children's Privacy**
+Since DreamLens collects no data whatsoever, it is inherently safe for users of all ages.
+
+**Changes to This Policy**
+If this policy is ever updated, changes will be noted here with a new "Last updated" date.
+
+**Contact**
+For questions about this privacy policy, contact: [YOUR_EMAIL]
+
+---
+
+## Review Notes (for App Store Review team)
+
+**What the app does:**
+DreamLens is an AI-powered dream journal and interpreter. Users type a description of their dream, and the app uses an on-device AI language model to generate an interpretation including emotional tone, key symbols, a written analysis, and a color-based "dream aura" visualization.
+
+**How the AI works:**
+The app bundles a quantized open-source AI language model (Qwen 3.5-0.8B, Q4_K_M quantization, GGUF format, ~533 MB). This model runs entirely on-device using the llama.cpp inference engine via a Swift wrapper library (swift-llama-cpp). The model uses the device's GPU (Metal) for acceleration.
+
+No internet connection is required. No API calls are made. No data is sent to any server. The AI model is included in the app bundle and loaded into memory when the user first requests a dream interpretation.
+
+**How to test:**
+1. Launch the app — you will see a splash screen with the DreamLens logo, then the home screen.
+2. Tap the purple "+" button in the bottom-right corner to create a new dream entry.
+3. Type any dream description in the text field. Example: "I was flying over a green forest and saw a river below me. Then I landed on a mountain and found a golden key."
+4. Tap "Decode Dream" and wait approximately 10-30 seconds for the on-device AI to generate the interpretation (time varies by device; newer devices are faster).
+5. The result screen will display: emotional tone with emoji, dream symbols with meanings, a written interpretation, and an animated dream aura.
+6. Dismiss the result — the dream is automatically saved to the journal on the home screen.
+7. Tap any saved dream card to revisit its interpretation.
+8. Long-press a dream card to delete it.
+9. Tap the gear icon (top-right) to access Settings where you can change the AI response language (English/Russian) and interpretation style (Mystical/Scientific/Poetic).
+
+**Important technical notes for review:**
+- The app binary is large (~600 MB) because the AI model file (~533 MB) is bundled inside the app. This is intentional — it enables fully offline operation.
+- The app uses the `com.apple.developer.kernel.increased-memory-limit` entitlement because loading the AI model into RAM requires additional memory. This is a standard entitlement for on-device ML applications.
+- First interpretation after launch may take slightly longer (~5-10 seconds extra) as the model loads into memory. Subsequent interpretations are faster.
+- The app requires iPhone 12 (A14 Bionic) or newer for adequate AI inference performance.
+- No internet permission is requested or used. The app has no URL schemes, no deep links, no web views, and makes no network calls.
+
+**Third-party dependencies:**
+- swift-llama-cpp (MIT License): A Swift wrapper around llama.cpp for on-device LLM inference. Source included in the project as a local package.
+- llama.cpp (MIT License): Open-source C/C++ library for running large language models. Distributed as an XCFramework binary, downloaded during the Swift Package Manager build process.
+
+**AI model details:**
+- Model: Qwen 3.5-0.8B (open-source, Apache 2.0 License, by Alibaba Cloud)
+- Quantization: Q4_K_M (4-bit quantized for mobile efficiency)
+- Format: GGUF
+- Source: Hugging Face (unsloth/Qwen3.5-0.8B-GGUF)
+- The model generates creative dream interpretations. It does not provide medical, psychological, or therapeutic advice.
